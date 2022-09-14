@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <div>
+            <h1>Banking application Argaud and Co</h1>
+            <div class="grid grid-cols-3">
+                <div data-th-each="compte : ${comptes}">
+                    <h2>Liste des comptes</h2>
+                    <p data-th-text="${compte.name}"></p>
+                </div>
+                <div class="">
+                    <h2>Détails</h2>
+                </div>
+                <div class="">
+                    <p>Ajouter des transactions</p>
+                    <p>Enlever des transactions</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
